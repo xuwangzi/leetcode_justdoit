@@ -1,0 +1,27 @@
+class NumArray {
+    // 变量：前缀和数组
+    private int[] preSum;
+
+    // 生成 前缀和数组
+    public NumArray(int[] nums) {
+        preSum = new int[nums.length + 1];
+        // preSum[0] = 0
+        for (int i = 1; i < preSum.length; i++) {
+            preSum[i] = preSum[i - 1] + nums[i - 1];
+        }
+    }
+
+    // 计算封闭区间的和
+    public int sumRange(int left, int right) {
+        return preSum[right + 1] - preSum[left];
+    }
+}
+
+/**
+ * Your NumArray object will be instantiated and called as such:
+ * NumArray obj = new NumArray(nums);
+ * int param_1 = obj.sumRange(left,right);
+ */
+
+//runtime:7 ms
+//memory:44.1 MB

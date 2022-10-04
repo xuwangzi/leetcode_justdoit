@@ -1,0 +1,81 @@
+### 解题思路
+
+1. 判断特殊情况：s的长度小于p的长度，直接返回
+2. 给目标值（p）窗口填值
+3. 给原值（s）窗口填入初值
+4. 判断二者相等，如果相等填入下标0
+5. 左边字符移除窗口。
+6. 右边字符如果不存在目标窗口中，跳过一个窗口长度的单位，并给原窗口重新赋值；存在的话直接填入窗口；
+7. 判断两个窗口是否相等。
+
+### 代码
+
+* java
+
+```java
+class Solution {
+
+    public List<Integer> findAnagrams(String s, String p) {
+        // 定义二者长度
+        int sLen = s.length();
+        int pLen = p.length();
+        // 定义结果集
+        List<Integer> result = new ArrayList<>();
+        // 特殊情况, s的长度小于p的长度
+        if(sLen < pLen){
+            return result;
+        }
+        // 定义俩个窗口用来暂存二者的结果集
+        int[] sArr = new int[26];
+        int[] pArr = new int[26];
+        // 用p中的字符给p结果赋值
+        for(int i = 0; i< pLen; i++){
+            pArr[p.charAt(i) - 'a']++;
+        }
+        // 用s中的字符给s窗口赋值
+        for(int i = 0; i< pLen; i++){
+            sArr[s.charAt(i) - 'a']++;
+        }
+        // 如果二者下标相等，加入下标0
+        if(Arrays.equals(sArr, pArr)){
+            result.add(0);
+        }
+        // 从1开始遍历s
+        for(int i = 1; i< sLen-pLen+1; i++){
+            // 移除窗口的左值
+            sArr[s.charAt(i-1) - 'a']--;
+            // 如果右值不存在于目标窗口之中，比如目标窗口ab，而右值为s
+            if(pArr[s.charAt(i+pLen-1) - 'a'] == 0){
+                // 清除窗口
+                sArr = new int[26];
+                // 跳过pLen个元素，直接指向右值右边
+                i = i+pLen;
+                // 需要赋值的右边界
+                int R = i+pLen;
+                // 如果右边界已经超s的长度了，直接返回
+                if(R > sLen){
+                    return result;
+                }
+                // 给s窗口重新赋值
+                for(int j = i; j< R; j++){
+                    sArr[s.charAt(j) - 'a']++;
+                }
+                // 判断新窗口和目标窗口
+                if(Arrays.equals(sArr, pArr)){
+                    result.add(i);
+                }
+                // 跳过后续步骤
+                continue;
+            }
+            // 直接右值 ++
+            sArr[s.charAt(i+pLen-1) - 'a']++;
+            // 判断是否相等
+            if(Arrays.equals(sArr, pArr)){
+                result.add(i);
+            }
+        }
+        return result;
+    }
+}
+```
+

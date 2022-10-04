@@ -1,0 +1,47 @@
+# 方法一：二分查找
+
+根据题意，珂珂每个小时只能在一个堆中吃`k`根香蕉，如果香蕉数量少于`k`根，则她吃完剩余香蕉，一个小时内不能吃别的堆的香蕉。
+![image.png](https://pic.leetcode-cn.com/1654562979-GFDtAM-image.png)
+根据上图描述，`k`的最小范围是`1`，最大范围是最大的堆的香蕉数量`max`，我们可以通过二分法找到最小的`k`。
+设吃香蕉的总时长为`costTime`，则问题转化为在`[1,max]`范围内寻找一个最小的`k`，使得`costTime <= h`
+**代码如下：**
+
+* 
+
+```
+public int minEatingSpeed(int[] piles, int h) {
+    //找到最大值
+    int max = Arrays.stream(piles).max().getAsInt();
+    //边界
+    int left = 1, right = max;
+    //目标K
+    int ans = max;
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+        //计算花费时长
+        int costTime = 0;
+        for (int pile : piles) {
+            int curCostTime = pile / mid;
+            //有剩余香蕉
+            if (curCostTime * mid < pile) {
+                curCostTime++;
+            }
+            costTime += curCostTime;
+        }
+        //记录结果，缩小范围
+        if (costTime <= h) {
+            ans = mid;
+            right = mid - 1;
+        } else {
+            left = mid + 1;
+        }
+    }
+    return ans;
+}
+```
+
+**复杂度分析**
+时间复杂度：O(nlogm),n为堆的数量，m为堆中的最大值
+空间复杂度：O(1)
+**写题解不易，如果对您有帮助，记得关注 + 点赞 + 收藏呦！！！**
+**每天都会更新每日一题题解，大家加油！！！**

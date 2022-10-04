@@ -1,0 +1,71 @@
+
+/**
+ * f(x)
+ * h
+ * |    \
+ * |     \______
+ * |            \
+ * |             \
+ * --------------------- x
+ */
+class Solution {
+    public int minEatingSpeed(int[] piles, int h) {
+        // [left,right]
+        // 1 <= piles[i] <= 10⁹
+        int left = 1;
+        int right = (int) 1e9;
+
+        // binarySearch
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+
+            if (f(piles, mid) == h) {
+                right = mid - 1;
+            } else if (f(piles, mid) < h) {
+                right = mid - 1;
+            } else if (f(piles, mid) > h) {
+                left = mid + 1;
+            }
+
+        }
+        
+        return left;
+
+//        // isTarget?
+//        //  1. overflow
+//        if (left == 1 + ((int) 1e9)) {
+//            return -1;
+//        }
+//        //  2. !=
+//        return f(piles, left) == h ? left : -1;
+
+
+    }
+
+
+    // 以x的速度，需要f(x)小时吃完
+    int f(int[] piles, int x) {
+        int hours = 0;
+
+        for (int pile :
+                piles) {
+            hours += pile / x;
+            if (pile % x > 0) {
+                hours++;
+            }
+        }
+
+        return hours;
+
+    }
+
+
+}
+
+
+//total_testcases:122
+//total_correct:121
+//input_formatted:[805306368,805306368,805306368]
+1000000000
+//expected_output:3
+//code_output:1

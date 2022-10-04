@@ -1,0 +1,57 @@
+### 解题思路
+
+使用移动窗口，就是字符和字符出现的频率需要用键值对存储，从而方便判断。可用c++的unordered_map类。
+
+### 代码
+
+* cpp
+
+```cpp
+class Solution {
+public:
+    string minWindow(string s, string t) {
+
+        if(s.size() < t.size()){//s长度小于t则直接返回空串
+            return "";
+        }
+
+        unordered_map<char,int> wmap, tmap;//hasmap，键值为字符，value为频次，映射起来方便判断
+
+        for(auto ch : t){//填充t串的hasmap
+            tmap[ch]++;
+        }
+
+        int end = 0, start = 0;//初始化移动窗口的头尾指针
+        int min = 0;//记录最小字符串长度
+        int finalStart = 0;//记录最小串的起始位置，用于输出截取s串
+        int count = 0;//计数，判断子串是否满足要求
+
+        //移动窗口，每一次end指向新的值都进行判断
+        for(end = 0; end < s.size(); end++){
+
+            wmap[s[end]]++;//更新窗口的hashmap
+
+            if(tmap.count(s[end])){//若t中存在s[end]字符则count函数返回非零
+                if(tmap[s[end]] == wmap[s[end]]){//进一步判断窗口和t中s[end]出现频次
+                   count++;//若都匹配则count加一
+                }
+            }
+
+            while(count == tmap.size()){//count与tmap中的字符数相等时，此时的窗口满足题设条件
+                if(end - start +1 < min || min == 0){//更新子串长度，min=0必定更新
+                    min = end - start +1;
+                    finalStart = start;//记录此时的起始位置
+                }
+                if(tmap.count(s[start])){//尝试缩小窗口，同样的判断逻辑
+                    if(tmap[s[start]] == wmap[s[start]]){
+                        count--;//s[start]满足条件时count减1，因为新的窗口不包含此时的s[start]
+                    }
+                }
+                wmap[s[start++]]--;//更新头指针和窗口hasmap
+            }
+        }
+        return min == 0 ? "" : s.substr(finalStart,min);//min不为零用string的substr函数截取输出
+    }
+};
+```
+

@@ -1,0 +1,70 @@
+### 解题思路
+
+1. 定义二者的长度
+2. 特殊情况：s比p小，直接返回
+3. 定义二者的结果暂存集合，放入初始值
+4. s每次移动一个单位，如果碰到了p中不存在的字符，直接跳过一个窗口长度，并且重新给sMap赋值
+
+### 代码
+
+* java
+
+```java
+class Solution {
+    public List<Integer> findAnagrams(String s, String p) {
+        // 定义结果
+        List<Integer> result = new ArrayList<>();
+        // 
+        int sLen = s.length();
+        int pLen = p.length();
+        // 特殊情况 如果s的长度小于p的长度,直接返回即可
+        if(sLen < pLen){
+            return result;
+        }
+        // 定义暂存p的结果Map
+        Map<Character, Integer> pMap = new HashMap<>(pLen);
+        // 定义存放s的结果的Map
+        Map<Character, Integer> sMap = new HashMap<>(sLen);
+        // 把p放入Map中
+        for(int i = 0; i< pLen; i++){
+            char c = p.charAt(i);
+            if(pMap.containsKey(c)){
+                pMap.put(c, pMap.get(c)+1);
+            }else{
+                pMap.put(c, 0);
+            }
+        }
+        for(int i = 0; i< pLen; i++){
+            char c = s.charAt(i);
+            if(sMap.containsKey(c)){
+                sMap.put(c, sMap.get(c)+1);
+            }else{
+                sMap.put(c, 0);
+            }
+        }
+        if(sMap.equals(pMap)){
+            result.add(0);
+        }
+        for(int i = 1; i< sLen - pLen+1; i++){
+            char left = s.charAt(i-1);
+            char right = s.charAt(i+pLen-1);
+            if(sMap.get(left) > 0){
+                sMap.put(left, sMap.get(left)-1);
+            }else{
+                sMap.remove(left);
+            }
+
+            if(sMap.containsKey(right)){
+                sMap.put(right, sMap.get(right)+1);
+            }else{
+                sMap.put(right, 0);
+            }
+            if(sMap.equals(pMap)){
+                result.add(i);
+            }
+        }
+        return result;
+    }
+}
+```
+
