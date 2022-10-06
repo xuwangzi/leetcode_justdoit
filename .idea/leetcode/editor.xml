@@ -25,6 +25,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[1081]不同字符的最小子序列.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/doc/content/[1081]不同字符的最小子序列.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1081" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[1081]不同字符的最小子序列.java" />
+              <option name="titleSlug" value="smallest-subsequence-of-distinct-characters" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[1094]拼车.java">
           <value>
             <LeetcodeEditor>
@@ -220,6 +231,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[304]二维区域和检索 - 矩阵不可变.java" />
               <option name="titleSlug" value="range-sum-query-2d-immutable" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[316]去除重复字母.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/doc/content/[316]去除重复字母.md" />
+              <option name="frontendQuestionId" value="leetcode.cn316" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[316]去除重复字母.java" />
+              <option name="titleSlug" value="remove-duplicate-letters" />
             </LeetcodeEditor>
           </value>
         </entry>
