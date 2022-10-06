@@ -37,7 +37,26 @@
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
+    // 单调栈
     public int[] nextGreaterElements(int[] nums) {
+        int len = nums.length;
+        int[] res = new int[len];
+        // 单调栈
+        Stack<Integer> s = new Stack<>();
+
+        // 由于是循环数组，loop长度加倍
+        for (int i = 2 * len - 1; i >= 0; i--) {
+            // pop
+            while (!s.isEmpty() && s.peek() <= nums[i % len]) {
+                s.pop();
+            }
+
+            // push
+            res[i % len] = s.isEmpty() ? -1 : s.peek();
+            s.push(nums[i % len]);
+        }
+
+        return res;
 
     }
 }
