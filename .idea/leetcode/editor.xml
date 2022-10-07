@@ -80,6 +80,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[146]LRU 缓存.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/doc/content/[146]LRU 缓存.md" />
+              <option name="frontendQuestionId" value="leetcode.cn146" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[146]LRU 缓存.java" />
+              <option name="titleSlug" value="lru-cache" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[1541]平衡括号字符串的最少插入次数.java">
           <value>
             <LeetcodeEditor>
