@@ -114,7 +114,7 @@ class RandomizedSet {
     public int getRandom() {
         Random r = new Random();
         return nums.get(r.nextInt(nums.size()));
-        // 返回一个伪随机数，[0,n)之间
+        // nextInt()返回一个伪随机数，[0,n)之间
     }
 
 

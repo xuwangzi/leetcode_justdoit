@@ -388,6 +388,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[710]黑名单中的随机数.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/doc/content/[710]黑名单中的随机数.md" />
+              <option name="frontendQuestionId" value="leetcode.cn710" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[710]黑名单中的随机数.java" />
+              <option name="titleSlug" value="random-pick-with-blacklist" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[739]每日温度.java">
           <value>
             <LeetcodeEditor>
