@@ -1,0 +1,67 @@
+### 解题思路
+
+哈希：是否存在，存在的位置
+数组：random时随机抽取
+
+------
+
+类似的
+
+[困难] 381. O(1) 时间插入、删除和获取随机元素 - 允许重复【设计】【数组】【哈希表】【数学】【随机化】[[随机化](https://leetcode-cn.com/problems/insert-delete-getrandom-o1-duplicates-allowed/solution/wa-pian-381-o1-shi-jian-cha-ru-shan-chu-b3cd0/)] [[381. O(1) 时间插入、删除和获取随机元素 - 允许重复](https://leetcode-cn.com/problems/insert-delete-getrandom-o1-duplicates-allowed/)]
+
+[困难] 710. 黑名单中的随机数【数学】【哈希表】【排序】【二分查找】【随机化】[[哈希表](https://leetcode-cn.com/problems/random-pick-with-blacklist/solution/710-hei-ming-dan-zhong-de-sui-ji-shu-jav-apew/)] [[710. 黑名单中的随机数](https://leetcode-cn.com/problems/random-pick-with-blacklist/)]
+
+### 代码
+
+* java
+
+```java
+public class RandomizedSet {
+
+	int max = 1 + 2 * (int) 1e5;
+
+	int[] nums;
+
+	Map<Integer, Integer> hash;
+
+	int range;
+
+	public RandomizedSet() {
+		nums = new int[max];
+		hash = new HashMap<>();
+		range = 0;
+	}
+
+	public boolean insert(int val) {
+		if (hash.containsKey(val)) {
+			return false;
+		} else {
+			hash.put(val, range);
+			nums[range++] = val;
+			return true;
+		}
+	}
+
+	public boolean remove(int val) {
+		int index = hash.getOrDefault(val, -1);
+		if (index == -1) {
+			return false;
+		} else {
+			hash.remove(val);
+			if (range > 1 && index != range - 1) {
+				int swap = nums[range - 1];
+				nums[index] = swap;
+				hash.put(swap, index);
+			}
+			range--;
+			return true;
+		}
+	}
+
+	public int getRandom() {
+		return nums[(int) (Math.random() * range)];
+	}
+
+}
+```
+

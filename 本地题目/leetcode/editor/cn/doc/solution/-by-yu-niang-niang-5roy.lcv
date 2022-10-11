@@ -1,0 +1,55 @@
+### 方法：哈希
+
+1. 突破点：随机访问=列表
+2. 列表的插入、删除，只有在尾部为 O(1)
+   - 插入时是在尾部，这个枚问题
+   - 删除不能直接删，直接删效率是O(n)，因为列表删除元素后，后续元素需要前移一位。下图为源码截图：
+     ![image.png](https://pic.leetcode-cn.com/1649804485-svaoiX-image.png)
+   - 考虑拿最后一个元素，填充到删除元素，用哈希记录每个元素的位置，并在删除过程不断更新
+
+* java
+
+```java
+class RandomizedSet {
+    List<Integer> list = new ArrayList<>();
+    Map<Integer,Integer> map = new HashMap<>();
+    Random r = new Random();
+    public RandomizedSet() {
+        
+    }
+    
+    public boolean insert(int val) {
+        if(map.containsKey(val))
+            return false;
+        list.add(val);
+        map.put(val,list.size()-1);
+        return true;
+    }
+    
+    public boolean remove(int val) {
+        if(!map.containsKey(val))
+            return false;
+         int index = map.get(val);
+        list.set(index,list.get(list.size()-1));
+        map.put(list.get(index),index);
+        list.remove(list.size()-1);
+        map.remove(val);
+        return true;
+    }
+    
+    public int getRandom() {
+        return list.get(r.nextInt(list.size()));
+    }
+}
+
+/**
+ * Your RandomizedSet object will be instantiated and called as such:
+ * RandomizedSet obj = new RandomizedSet();
+ * boolean param_1 = obj.insert(val);
+ * boolean param_2 = obj.remove(val);
+ * int param_3 = obj.getRandom();
+ */
+```
+
+时间复杂度：O(1)
+空间复杂度：O(n)
