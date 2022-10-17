@@ -1,0 +1,51 @@
+### 解题思路
+
+### 代码
+
+* java
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+   public List<Integer> largestValues(TreeNode root) {
+    //在每个树行中找最大值
+        Queue<TreeNode> que = new LinkedList<>();
+        List<Integer> res = new ArrayList<>();
+        int max = Integer.MIN_VALUE;
+        if(root == null){return res;}
+        que.offer(root);
+        while (!que.isEmpty()){
+            int num = que.size();
+            while (num > 1){
+                TreeNode tempNode = que.poll();
+                if (tempNode.left !=null){que.offer(tempNode.left);}
+                if (tempNode.right != null){que.offer(tempNode.right);}
+                num--;
+                if(tempNode.val > max){max = tempNode.val;}
+            }
+            TreeNode tempNode = que.poll();
+            if (tempNode.left !=null){que.offer(tempNode.left);}
+            if (tempNode.right != null){que.offer(tempNode.right);}
+            if(tempNode.val > max){max = tempNode.val;}  
+            res.add(max);
+            max = Integer.MIN_VALUE;
+        }
+        return res;
+    }
+}
+```
+
