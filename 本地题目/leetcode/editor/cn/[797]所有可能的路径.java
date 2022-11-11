@@ -44,8 +44,42 @@
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
-    public List<List<Integer>> allPathsSourceTarget(int[][] graph) {
+    // 记录所有路径
+    List<List<Integer>> res = new LinkedList<>();
 
+    /* main */
+    public List<List<Integer>> allPathsSourceTarget(int[][] graph) {
+        // 维护递归过程中经过的路径
+        LinkedList<Integer> path = new LinkedList<>();
+
+        // 遍历
+        traverse(graph, 0, path);
+
+        return res;
+    }
+
+    /* 图的遍历框架 */
+    private void traverse(int[][] graph, int start, LinkedList<Integer> path) {
+        // 添加节点 start 到路径
+        path.addLast(start);
+
+        int n = graph.length;
+        if (start == n - 1) {// 到达终点
+            /// 注意 Java 的语⾔特性：
+            ///   因为 Java 函数参数传的是对象引⽤，所以向 res 中添加 path 时需要拷⻉⼀个新的列表，否则最终 res 中的列表都是空的。
+            res.add(new LinkedList<>(path));
+
+            path.removeLast();
+            return;
+        }
+
+        // 递归每个相邻节点
+        for (int nextNode:graph[start]){
+            traverse(graph,nextNode,path);
+        }
+
+        // 从路径移出节点 s
+        path.removeLast();
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
