@@ -43,8 +43,56 @@
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
-    public List<List<Integer>> combinationSum2(int[] candidates, int target) {
+    List<List<Integer>> res  = new LinkedList<>();
+    // 记录回溯的路径
+    LinkedList<Integer> track = new LinkedList<>();
+    // 记录 track 中的元素之和
+    int trackSum = 0;
 
+
+    // main
+    public List<List<Integer>> combinationSum2(int[] candidates, int target) {
+        // special case
+        if (candidates.length==0) return res;
+
+        // 先排序，让相同的元素靠在⼀起
+        Arrays.sort(candidates);
+
+        // backtrack
+        backtrack(candidates,0,target);
+
+        return res;
+    }
+
+
+    // backtrack
+    void backtrack(int[] candidates,int start,int target){
+        // base case
+        if (trackSum==target){
+            res.add(new LinkedList<>(track));
+            return;
+        } else if (trackSum>target) {
+            return;
+        }
+
+        // backtrack frame
+        for (int i = start; i < candidates.length; i++) {
+            // cut : 剪枝逻辑，值相同的树枝，只遍历第⼀条
+            if (i>start && candidates[i]==candidates[i-1]){
+                continue;
+            }
+
+            // choose
+            track.add(candidates[i]);
+            trackSum+=candidates[i];
+
+            // backtrack
+            backtrack(candidates,i+1,target);
+
+            // revoke
+            track.removeLast();
+            trackSum -= candidates[i];
+        }
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

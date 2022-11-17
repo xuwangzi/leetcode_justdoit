@@ -25,6 +25,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[1020]飞地的数量.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/doc/content/[1020]飞地的数量.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1020" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[1020]飞地的数量.java" />
+              <option name="titleSlug" value="number-of-enclaves" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[104]二叉树的最大深度.java">
           <value>
             <LeetcodeEditor>
@@ -110,6 +121,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[116]填充每个节点的下一个右侧节点指针.java" />
               <option name="titleSlug" value="populating-next-right-pointers-in-each-node" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[1254]统计封闭岛屿的数目.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/doc/content/[1254]统计封闭岛屿的数目.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1254" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[1254]统计封闭岛屿的数目.java" />
+              <option name="titleSlug" value="number-of-closed-islands" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -234,6 +256,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[1905]统计子岛屿.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/doc/content/[1905]统计子岛屿.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1905" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[1905]统计子岛屿.java" />
+              <option name="titleSlug" value="count-sub-islands" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[19]删除链表的倒数第 N 个结点.java">
           <value>
             <LeetcodeEditor>
@@ -242,6 +275,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[19]删除链表的倒数第 N 个结点.java" />
               <option name="titleSlug" value="remove-nth-node-from-end-of-list" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[200]岛屿数量.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/doc/content/[200]岛屿数量.md" />
+              <option name="frontendQuestionId" value="leetcode.cn200" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[200]岛屿数量.java" />
+              <option name="titleSlug" value="number-of-islands" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -297,6 +341,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[215]数组中的第K个最大元素.java" />
               <option name="titleSlug" value="kth-largest-element-in-an-array" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[216]组合总和 III.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/doc/content/[216]组合总和 III.md" />
+              <option name="frontendQuestionId" value="leetcode.cn216" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[216]组合总和 III.java" />
+              <option name="titleSlug" value="combination-sum-iii" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -520,6 +575,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[39]组合总和.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/doc/content/[39]组合总和.md" />
+              <option name="frontendQuestionId" value="leetcode.cn39" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[39]组合总和.java" />
+              <option name="titleSlug" value="combination-sum" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[3]无重复字符的最长子串.java">
           <value>
             <LeetcodeEditor>
@@ -594,6 +660,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[46]全排列.java" />
               <option name="titleSlug" value="permutations" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[47]全排列 II.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/doc/content/[47]全排列 II.md" />
+              <option name="frontendQuestionId" value="leetcode.cn47" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[47]全排列 II.java" />
+              <option name="titleSlug" value="permutations-ii" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -715,6 +792,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[654]最大二叉树.java" />
               <option name="titleSlug" value="maximum-binary-tree" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[695]岛屿的最大面积.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/doc/content/[695]岛屿的最大面积.md" />
+              <option name="frontendQuestionId" value="leetcode.cn695" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[695]岛屿的最大面积.java" />
+              <option name="titleSlug" value="max-area-of-island" />
             </LeetcodeEditor>
           </value>
         </entry>
