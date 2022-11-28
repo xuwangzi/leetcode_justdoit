@@ -36,6 +36,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[1024]视频拼接.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/doc/content/[1024]视频拼接.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1024" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[1024]视频拼接.java" />
+              <option name="titleSlug" value="video-stitching" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[104]二叉树的最大深度.java">
           <value>
             <LeetcodeEditor>
@@ -190,6 +201,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[1288]删除被覆盖区间.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/doc/content/[1288]删除被覆盖区间.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1288" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[1288]删除被覆盖区间.java" />
+              <option name="titleSlug" value="remove-covered-intervals" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[130]被围绕的区域.java">
           <value>
             <LeetcodeEditor>
@@ -289,6 +311,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[15]三数之和.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/doc/content/[15]三数之和.md" />
+              <option name="frontendQuestionId" value="leetcode.cn15" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[15]三数之和.java" />
+              <option name="titleSlug" value="3sum" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[160]相交链表.java">
           <value>
             <LeetcodeEditor>
@@ -352,6 +385,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[188]买卖股票的最佳时机 IV.java" />
               <option name="titleSlug" value="best-time-to-buy-and-sell-stock-iv" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[18]四数之和.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/doc/content/[18]四数之和.md" />
+              <option name="frontendQuestionId" value="leetcode.cn18" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[18]四数之和.java" />
+              <option name="titleSlug" value="4sum" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -564,6 +608,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[241]为运算表达式设计优先级.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/doc/content/[241]为运算表达式设计优先级.md" />
+              <option name="frontendQuestionId" value="leetcode.cn241" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[241]为运算表达式设计优先级.java" />
+              <option name="titleSlug" value="different-ways-to-add-parentheses" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[26]删除有序数组中的重复项.java">
           <value>
             <LeetcodeEditor>
@@ -770,6 +825,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[382]链表随机节点.java" />
               <option name="titleSlug" value="linked-list-random-node" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[391]完美矩形.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/doc/content/[391]完美矩形.md" />
+              <option name="frontendQuestionId" value="leetcode.cn391" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[391]完美矩形.java" />
+              <option name="titleSlug" value="perfect-rectangle" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -1037,6 +1103,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[56]合并区间.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/doc/content/[56]合并区间.md" />
+              <option name="frontendQuestionId" value="leetcode.cn56" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[56]合并区间.java" />
+              <option name="titleSlug" value="merge-intervals" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[583]两个字符串的删除操作.java">
           <value>
             <LeetcodeEditor>
@@ -1111,6 +1188,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[654]最大二叉树.java" />
               <option name="titleSlug" value="maximum-binary-tree" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[659]分割数组为连续子序列.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/doc/content/[659]分割数组为连续子序列.md" />
+              <option name="frontendQuestionId" value="leetcode.cn659" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[659]分割数组为连续子序列.java" />
+              <option name="titleSlug" value="split-array-into-consecutive-subsequences" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -1496,6 +1584,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[96]不同的二叉搜索树.java" />
               <option name="titleSlug" value="unique-binary-search-trees" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[986]区间列表的交集.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/doc/content/[986]区间列表的交集.md" />
+              <option name="frontendQuestionId" value="leetcode.cn986" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/本地题目/leetcode/editor/cn/[986]区间列表的交集.java" />
+              <option name="titleSlug" value="interval-list-intersections" />
             </LeetcodeEditor>
           </value>
         </entry>

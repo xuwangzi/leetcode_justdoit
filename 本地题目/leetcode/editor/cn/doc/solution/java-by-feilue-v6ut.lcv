@@ -1,0 +1,58 @@
+获取最左下和最右上的坐标来计算面积，并与所有矩形面积之和比较
+
+若不相等： 肯定不能构成完美矩形
+若相等：  要么可以构成完美矩形，要么必定有重叠部分
+
+若为完美矩形，除了最外面的四个顶点外，其他点必定出现 $2$ 次或 $4$ 次
+
+把每个矩形的四个点放入 $set$ 检查，每出现 $2$ 遍就移除，最后检查是否只剩下四个顶点
+
+* []
+
+```Java
+class Solution {
+
+    Set<Integer> set;
+
+    public boolean isRectangleCover(int[][] rectangles) {
+        long area = 0;
+        set = new HashSet();
+
+        int minX = Integer.MAX_VALUE, minY = Integer.MAX_VALUE, maxX = Integer.MIN_VALUE, maxY = Integer.MIN_VALUE;
+        for(int[] rec : rectangles){
+            int x1 = rec[0], y1 = rec[1], x2 = rec[2], y2 = rec[3];
+            area += (long)(x2 - x1) * (y2 - y1);
+
+            if(x1 < minX || y1 < minY){
+                minX = x1;
+                minY = y1;
+            }
+            if(x2 > maxX || y2 > maxY){
+                maxX = x2;
+                maxY = y2;
+            }
+
+            put(getKey(x1, y1));
+            put(getKey(x1, y2));
+            put(getKey(x2, y1));
+            put(getKey(x2, y2));
+        }        
+        
+        if(area != ((long)(maxX - minX) * (maxY - minY))) return false;
+        return set.size() == 4 && set.contains(getKey(minX, minY)) && 
+                                  set.contains(getKey(minX, maxY)) &&
+                                  set.contains(getKey(maxX, minY)) &&
+                                  set.contains(getKey(maxX, maxY));
+
+    }
+
+    private void put(int key){ 
+        if(!set.add(key)) set.remove(key); 
+    }
+
+    private int getKey(int x, int y){ 
+        return x * 100001 + y;
+    }
+}
+```
+

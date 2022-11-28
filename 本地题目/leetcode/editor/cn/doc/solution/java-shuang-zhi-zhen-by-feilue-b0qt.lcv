@@ -1,0 +1,38 @@
+因为两个列表里都为**不相交**且**已经排序**好的区间，我们可以使用双指针逐个检查重合区域
+
+对于两个区间 $arr1 = [left1, right1]$， $arr2 = [left2, right2]$
+**判断重合：**
+- 若两个区间 $arr1$ 与 $arr2$ 相交， 那么重合区域为 $[max(left1, left2), min(right1, right2)]$
+- 若不相交，则 $right1 < left2$ 或 $right2 < left1$， 那么求得的重合区域 $max(left1, left2)$ 的值会比 $min(right1, right2)$ 大， 可以通过比较两个值来判断是否重合
+
+**移动指针：**
+- 假设 $right1 < right2$， 因为区间列表为不相交且已经排序好的， 则 $arr1$ 不可能与 $secondList$ 中 $arr2$ 以后的任何区间相交。 所以每次优先移动当前区间尾段较小的指针 ($right2 < right1$ 同理)
+- 若 $right1 == right2$， 因为列表各个区间不相交， $arr1$ 与 $arr2$ 都不可能与之后的区间有交集， 可以移动任意一个
+
+* []
+
+```Java
+class Solution {
+    public int[][] intervalIntersection(int[][] firstList, int[][] secondList) {
+        List<int[]> res = new ArrayList();
+        int p1 = 0, p2 = 0;
+        int n1 = firstList.length, n2 = secondList.length;
+
+        while(p1 < n1 && p2 < n2){
+            int[] arr1 = firstList[p1];
+            int[] arr2 = secondList[p2];
+
+            int L = Math.max(arr1[0], arr2[0]);
+            int R = Math.min(arr1[1], arr2[1]);
+
+            if(L <= R) res.add(new int[]{L, R});
+
+            if(arr1[1] < arr2[1]) p1++;
+            else p2++;
+        }
+
+        return res.toArray(new int[res.size()][]);
+    }
+}
+```
+
